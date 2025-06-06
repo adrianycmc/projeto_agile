@@ -216,10 +216,10 @@ const ToolsPage: React.FC = () => {
   ];
 
   // Categorias únicas para filtros
-  const categories = Array.from(new Set(tools.map(tool => tool.category)));
+  // const categories = Array.from(new Set(tools.map(tool => tool.category)));
   
   // Níveis de dificuldade para filtros
-  const difficulties = ['iniciante', 'intermediário', 'avançado'];
+  // const difficulties = ['iniciante', 'intermediário', 'avançado'];
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -263,42 +263,40 @@ const ToolsPage: React.FC = () => {
               </div>
 
               {/* Filtros */}
-              <div className="flex flex-col md:flex-row gap-4 mb-6">
+              {/* <div className="flex flex-col md:flex-row gap-4 mb-6">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">Categoria</label>
                   <div className="flex flex-wrap gap-2">
                     <button className="btn bg-primary text-white hover:bg-opacity-90 text-sm">
                       Todas
-                    </button>
+                    {/* </button>
                     {categories.map((category, index) => (
                       <button 
                         key={index} 
                         className="btn bg-gray-200 text-gray-700 hover:bg-gray-300 text-sm"
                       >
                         {category}
-                      </button>
-                    ))}
+                      </button> */}
+                    {/* ))}
                   </div>
                 </div>
+                 */}
                 
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Nível</label>
+                {/* <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Dificuldade</label>
                   <div className="flex flex-wrap gap-2">
-                    <button className="btn bg-primary text-white hover:bg-opacity-90 text-sm">
-                      Todos
-                    </button>
                     {difficulties.map((difficulty, index) => (
                       <button 
                         key={index} 
-                        className="btn bg-gray-200 text-gray-700 hover:bg-gray-300 text-sm"
+                        className={`btn ${difficulty === 'iniciante' ? 'bg-success' : difficulty === 'intermediário' ? 'bg-warning' : 'bg-accent'} text-white hover:bg-opacity-90 text-sm`}
                       >
                         {difficulty.charAt(0).toUpperCase() + difficulty.slice(1)}
                       </button>
                     ))}
                   </div>
                 </div>
-              </div>
-            </div>
+              </div> */}
+            </div>    
 
             {/* Grid de Ferramentas */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -318,66 +316,6 @@ const ToolsPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Seção de Tutoriais Rápidos */}
-        <section className="py-16 bg-gray-100">
-          <div className="container-custom">
-            <div className="text-center mb-12">
-              <h2 className="text-primary mb-4">Tutoriais Rápidos</h2>
-              <p className="text-lg max-w-3xl mx-auto">
-                Aprenda a utilizar as ferramentas mais populares com nossos tutoriais passo a passo.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="card overflow-hidden">
-                <img src="https://i.ytimg.com/vi/tVooja0Ta5I/maxresdefault.jpg" alt="Tutorial Trello" className="w-full h-40 object-cover" />
-                <div className="p-4">
-                  <h3 className="font-bold text-lg mb-2">Trello para Iniciantes</h3>
-                  <p className="text-gray-600 text-sm mb-4">
-                    Aprenda a configurar seu primeiro quadro Kanban no Trello e organizar suas tarefas.
-                  </p>
-                  <a href="/tutorial/trello" className="btn btn-primary w-full">Ver Tutorial</a>
-                </div>
-              </div>
-
-              <div className="card overflow-hidden">
-                <img src="https://i.ytimg.com/vi/GacxNzZEqZg/maxresdefault.jpg" alt="Tutorial Jira" className="w-full h-40 object-cover" />
-                <div className="p-4">
-                  <h3 className="font-bold text-lg mb-2">Configurando Sprints no Jira</h3>
-                  <p className="text-gray-600 text-sm mb-4">
-                    Tutorial completo sobre como configurar e gerenciar sprints no Jira Software.
-                  </p>
-                  <a href="/tutorial/jira-sprints" className="btn btn-primary w-full">Ver Tutorial</a>
-                </div>
-              </div>
-
-              <div className="card overflow-hidden">
-                <img src="https://i.ytimg.com/vi/O8qdvSxDYNY/maxresdefault.jpg" alt="Tutorial Miro" className="w-full h-40 object-cover" />
-                <div className="p-4">
-                  <h3 className="font-bold text-lg mb-2">Retrospectivas no Miro</h3>
-                  <p className="text-gray-600 text-sm mb-4">
-                    Como utilizar o Miro para conduzir retrospectivas ágeis eficientes e interativas.
-                  </p>
-                  <a href="/tutorial/miro-retrospectivas" className="btn btn-primary w-full">Ver Tutorial</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Call to Action */}
-        <section className="py-16 bg-primary text-white">
-          <div className="container-custom text-center">
-            <h2 className="mb-4">Conhece alguma ferramenta útil?</h2>
-            <p className="text-lg mb-8 max-w-2xl mx-auto">
-              Se você utiliza alguma ferramenta que não está em nossa lista e gostaria de compartilhar com outros estagiários,
-              envie sua sugestão para nossa equipe.
-            </p>
-            <a href="/sugerir-ferramenta" className="btn bg-white text-primary hover:bg-opacity-90">
-              Sugerir Ferramenta
-            </a>
-          </div>
-        </section>
       </main>
       <Footer />
     </div>

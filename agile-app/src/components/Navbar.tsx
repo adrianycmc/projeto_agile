@@ -26,10 +26,9 @@ const Navbar: React.FC = () => {
             <a href="/materiais" className="font-medium hover:text-primary transition-colors">Materiais</a>
             <a href="/ferramentas" className="font-medium hover:text-primary transition-colors">Ferramentas</a>
             <a href="/agenda" className="font-medium hover:text-primary transition-colors">Agenda</a>
-            <a href="/forum" className="font-medium hover:text-primary transition-colors">Fórum</a>
           </div>
 
-          {/* Search and Login Button (Desktop) */}
+          {/* Search and Login Button (Desktop)
           <div className="hidden md:flex items-center space-x-4">
             <div className="relative">
               <input 
@@ -52,8 +51,8 @@ const Navbar: React.FC = () => {
                 />
               </svg>
             </div>
-            <button className="btn btn-primary">Login</button>
-          </div>
+            {/* <button className="btn btn-primary">Login</button> */}
+          {/* </div>  */}
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">

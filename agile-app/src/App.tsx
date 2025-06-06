@@ -121,29 +121,6 @@ function App() {
                 color="success"
               />
               
-              <FeatureCard 
-                icon={
-                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
-                  </svg>
-                }
-                title="Fórum de Dúvidas"
-                description="Tire suas dúvidas e interaja com outros estagiários e mentores experientes."
-                link="/forum"
-                color="warning"
-              />
-              
-              <FeatureCard 
-                icon={
-                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                  </svg>
-                }
-                title="Comunidade"
-                description="Conecte-se com outros estagiários e profissionais da área de tecnologia."
-                link="/comunidade"
-                color="primary"
-              />
             </div>
           </div>
         </section>
@@ -154,21 +131,21 @@ function App() {
             <div className="text-center mb-12">
               <h2 className="text-primary mb-4">Depoimentos</h2>
               <p className="text-lg max-w-3xl mx-auto">
-                Veja o que outros estagiários estão dizendo sobre nossa plataforma.
+                Veja o que outros estagiários estão dizendo.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="card p-6">
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 rounded-full bg-gray-300 mr-4"></div>
+                  {/* <div className="w-12 h-12 rounded-full bg-gray-300 mr-4"></div> */}
                   <div>
                     <h4 className="font-bold">Ana Silva</h4>
                     <p className="text-sm text-gray-600">Estagiária de Desenvolvimento</p>
                   </div>
                 </div>
                 <p className="italic">
-                  "Os materiais e vídeos me ajudaram muito a entender Scrum e Kanban. Consegui aplicar o conhecimento no meu estágio e fui elogiada pelo meu gestor!"
+                  "Os workshops e vídeos me ajudaram muito a entender Scrum e Kanban. Consegui aplicar o conhecimento no meu estágio e foi ótimo paraa minha jornada"
                 </p>
                 <div className="flex mt-4 text-warning">
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -191,14 +168,14 @@ function App() {
 
               <div className="card p-6">
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 rounded-full bg-gray-300 mr-4"></div>
+                  {/* <div className="w-12 h-12 rounded-full bg-gray-300 mr-4"></div> */}
                   <div>
                     <h4 className="font-bold">Pedro Santos</h4>
                     <p className="text-sm text-gray-600">Estagiário de Produto</p>
                   </div>
                 </div>
                 <p className="italic">
-                  "O fórum me ajudou a resolver dúvidas que eu tinha sobre como aplicar o Scrum em projetos pequenos. A comunidade é muito prestativa!"
+                  "Consegui aplicar o Scrum em projetos pequenos graças aos encontros que tivemos. A comunidade é muito prestativa!"
                 </p>
                 <div className="flex mt-4 text-warning">
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -221,7 +198,7 @@ function App() {
 
               <div className="card p-6">
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 rounded-full bg-gray-300 mr-4"></div>
+                  {/* <div className="w-12 h-12 rounded-full bg-gray-300 mr-4"></div> */}
                   <div>
                     <h4 className="font-bold">Juliana Costa</h4>
                     <p className="text-sm text-gray-600">Estagiária de QA</p>
@@ -253,7 +230,7 @@ function App() {
         </section>
 
         {/* Call to Action */}
-        <section className="py-16 bg-primary text-white">
+        {/* <section className="py-16 bg-primary text-white">
           <div className="container-custom text-center">
             <h2 className="mb-4">Pronto para começar sua jornada ágil?</h2>
             <p className="text-lg mb-8 max-w-2xl mx-auto">
@@ -268,7 +245,7 @@ function App() {
               </a>
             </div>
           </div>
-        </section>
+        </section> */}
       </main>
       <Footer />
     </div>
